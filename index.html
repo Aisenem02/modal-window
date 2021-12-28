@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p class="modal-text">Here I am ! Now close me</p>
+            <button id="close"> Close</button>
+        </div>
+    </div>
+    <script>
+        const btn = document.createElement("button");
+        const modal = document.getElementById('modal');
+        const closeBtn = document.getElementById("close")
+
+        btn.id = "btn";
+        btn.innerText = "Open Modal";
+        document.body.appendChild(btn);
+
+
+        function openModal() {
+            modal.style.display = "block"
+
+        }
+        function closeModal() {
+            modal.style.display = "none"
+
+        }
+        closeBtn.addEventListener('click', closeModal)
+        btn.addEventListener('click', openModal)
+
+
+    </script>
+</body>
+
+</html>
